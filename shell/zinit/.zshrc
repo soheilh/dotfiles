@@ -57,7 +57,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 # zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls -ltrha --color'
+alias ls='ls -ltrhA --color'
 alias ip='ip -c'
 alias diff='diff --color'
 alias grep='grep --color=auto'
