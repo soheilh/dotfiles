@@ -61,6 +61,7 @@ alias ls='ls -ltrhA --color'
 alias ip='ip -c'
 alias diff='diff --color'
 alias grep='grep --color=auto'
+alias rm='rm -i'
 
 # Shell integrations
 eval "$(fzf --zsh)"
