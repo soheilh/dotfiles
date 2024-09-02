@@ -1,0 +1,62 @@
+# ~/.config/starship.toml
+
+# Adds a newline at the end of the prompt
+add_newline = true
+
+# Format of the prompt
+format = '''
+[╭─](white)$conda\($username$hostname\) - \[$directory\]$ruby$python$git_branch
+[╰─](white) $character'''
+
+# Character Module
+[character]
+success_symbol = "[#](bold blue)"
+error_symbol = "[!](bold red)"
+
+# Username Module
+[username]
+format = "[$user@]($style)"
+style_user = 'bold blue'
+style_root = 'bold blue'
+disabled = false
+show_always = true
+
+# Hostname Module
+[hostname]
+ssh_only = false
+format = "[$hostname]($style)"
+style = "bold blue"
+disabled = false
+
+# Directory Module
+[directory]
+format = "[$path]($style)"
+style = "bold white"
+truncation_length = 3
+truncation_symbol = ".../"
+
+# Conda Module
+[conda]
+format = "([$env]($style))"
+style = "bold"
+
+# Ruby Version (RVM)
+[ruby]
+format = "[$symbol$version]($style)"
+style = "bold red"
+
+# Python Virtual Environment
+[python]
+format = " [$virtualenv]($style)"
+style = "bold green"
+
+# Git Branch
+[git_branch]
+format = " [$branch]($style)"
+style = "bold yellow"
+
+# Git Status
+[git_status]
+format = " [|$all_status$ahead_behind]($style)"
+style = "bold yellow"
+
