@@ -1,0 +1,68 @@
+# --- THEME & APPEARANCE SETTINGS ---
+theme = GitHub-Dark-High-Contrast
+background-opacity = 0.85
+# background-blur-radius = 20
+# config-file = themes/rosepine
+
+# --- SHADER SETTINGS ---
+# custom-shader = shaders/bloom.glsl
+
+# --- FONT SETTINGS ---
+font-family = JetBrainsMono NFM
+font-style = SemiBold
+font-style-bold = ExtraBold
+font-style-italic = SemiBold Italic
+font-style-bold-italic = ExtraBold Italic
+font-size = 14
+bold-is-bright = true
+
+# --- CURSOR SETTINGS ---
+cursor-style = block
+cursor-style-blink = true
+cursor-invert-fg-bg = true
+
+# --- WINDOW & UI SETTINGS ---
+window-width = 130
+window-height = 33
+window-theme = ghostty
+mouse-hide-while-typing = true
+gtk-titlebar = false
+confirm-close-surface = false
+window-decoration = true
+window-padding-x = 20
+window-padding-y = 30,20
+window-padding-balance = false
+
+# --- UPDATE SETTINGS ---
+auto-update = check
+auto-update-channel = stable
+
+# --- EXTRA FEATURES ---
+shell-integration-features = no-cursor 
+# copy-on-select = clipboard
+
+# --- CUSTOM KEYBINDINGS ---
+## Simple Keybinds
+keybind = super+r=reload_config 
+keybind = super+i=inspector:toggle
+keybind = super+b>,=toggle_quick_terminal
+
+## Tmux-like Keybinds
+# (ctrl+b for tmux -> cmd+b for ghostty)
+keybind = super+b>x=close_surface
+
+## Tab Navigation
+keybind = super+b>1=goto_tab:1
+keybind = super+b>2=goto_tab:2
+keybind = super+b>3=goto_tab:3
+keybind = super+b>4=goto_tab:4
+keybind = super+b>5=goto_tab:5
+keybind = super+b>6=goto_tab:6
+keybind = super+b>7=goto_tab:7
+keybind = super+b>8=goto_tab:8
+keybind = super+b>9=goto_tab:9
+
+## Splitting
+keybind = super+b>\=new_split:right
+keybind = super+b>-=new_split:down
+keybind = super+b>e=equalize_splits
