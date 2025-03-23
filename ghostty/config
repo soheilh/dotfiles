@@ -31,7 +31,7 @@ confirm-close-surface = false
 window-decoration = true
 window-padding-x = 20
 window-padding-y = 20
-window-padding-balance = false
+window-padding-balance = true
 
 # --- UPDATE SETTINGS ---
 auto-update = check
@@ -40,6 +40,7 @@ auto-update-channel = stable
 # --- EXTRA FEATURES ---
 shell-integration-features = no-cursor 
 # copy-on-select = clipboard
+confirm-close-surface = true
 
 # --- CUSTOM KEYBINDINGS ---
 ## Simple Keybinds
