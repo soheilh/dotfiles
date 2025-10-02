@@ -1,5 +1,5 @@
 # --- THEME & APPEARANCE SETTINGS ---
-theme = GitHub-Dark-High-Contrast
+theme = "light:GitHub Light Default,dark:GitHub Dark Default"
 background-opacity = 0.85
 # background-blur-radius = 20
 # config-file = themes/rosepine
@@ -22,8 +22,8 @@ cursor-style-blink = true
 cursor-invert-fg-bg = true
 
 # --- WINDOW & UI SETTINGS ---
-window-width = 130
-window-height = 33
+window-width = 120
+window-height = 30
 window-theme = ghostty
 mouse-hide-while-typing = true
 gtk-titlebar = false
