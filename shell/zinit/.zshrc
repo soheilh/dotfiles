@@ -11,13 +11,8 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # --- Load starship theme ---
-zinit ice as"command" from"gh-r" \
-          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-          atpull"%atclone" src"init.zsh"
+zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh" src"init.zsh"
 zinit light starship/starship
-
-# --- Initialize Starship in .zshrc ---
-eval "$(starship init zsh)"
 
 # --- Add Plugins ---
 zinit light zsh-users/zsh-syntax-highlighting
@@ -28,7 +23,8 @@ zinit light Aloxaf/fzf-tab
 zinit light so-fancy/diff-so-fancy
 
 # --- Load completions ---
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+compinit -C
 
 # --- Keybindings ---
 autoload -U history-search-end
@@ -69,7 +65,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # --- Aliases ---
-alias ls='exa'
+alias ls='eza'
 alias ip='ip -c'
 alias diff='diff --color'
 alias grep='grep --color=auto'
@@ -82,3 +78,7 @@ eval "$(fzf --zsh)"
 # --- Completion ---
 # Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/soheil/.dart-cli-completion/zsh-config.zsh ]] && . /home/soheil/.dart-cli-completion/zsh-config.zsh || true
+
+# -- Add to PATH --
+export PATH="$HOME/.cargo/bin:$PATH"
+
