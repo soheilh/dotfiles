@@ -65,11 +65,13 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # --- Aliases ---
-alias ls='eza'
+alias ls='eza --icons'
 alias ip='ip -c'
 alias diff='diff --color'
-alias grep='grep --color=auto'
+alias grep='rg --color=auto'
 alias rm='rm -i'
+alias tor-on='sudo systemctl start tor.service'
+alias tor-off='sudo systemctl stop tor.service'
 
 # --- Shell integrations ---
 eval "$(fzf --zsh)"
