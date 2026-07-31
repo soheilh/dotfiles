@@ -1,14 +1,22 @@
 {
     "files.autoSave": "afterDelay",
     "editor.fontFamily": "'FiraCode Nerd Font Mono', 'JetBrainsMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
-    "editor.fontSize": 14.5,
+    "editor.fontSize": 15,
     "editor.fontWeight": "500",
     "editor.lineHeight": 1.5,
     "editor.fontLigatures": true,
     "editor.scrollbar.horizontal": "hidden",
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
+    "editor.wordWrap": "on",
     "window.titleBarStyle": "custom",
     "window.dialogStyle": "custom",
-    "workbench.layoutControl.enabled": false
+    "workbench.layoutControl.enabled": false,
+    "workbench.navigationControl.enabled": false,
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "rust-analyzer.server.path": "/usr/bin/rust-analyzer",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
 }
