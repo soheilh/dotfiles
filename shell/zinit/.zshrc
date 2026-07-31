@@ -72,6 +72,7 @@ alias grep='rg --color=auto'
 alias rm='rm -i'
 alias tor-on='sudo systemctl start tor.service'
 alias tor-off='sudo systemctl stop tor.service'
+alias tor-status='journalctl -exfu tor'
 
 # --- Shell integrations ---
 eval "$(fzf --zsh)"
