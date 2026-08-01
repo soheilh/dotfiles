@@ -21,6 +21,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light junegunn/fzf
 zinit light Aloxaf/fzf-tab
 zinit light so-fancy/diff-so-fancy
+zinit light hlissner/zsh-autopair
 
 # --- Load completions ---
 autoload -Uz compinit
@@ -41,7 +42,7 @@ bindkey "\e[1;5D" backward-word
 bindkey "\e[3;5~" kill-word
 ## ctrl+backspace
 bindkey '^H' backward-kill-word
-# ctrl+shift+delete
+## ctrl+shift+delete
 bindkey "\e[3;6~" kill-line
 
 # --- History ---
@@ -73,6 +74,13 @@ alias rm='rm -i'
 alias tor-on='sudo systemctl start tor.service'
 alias tor-off='sudo systemctl stop tor.service'
 alias tor-status='journalctl -exfu tor'
+
+# --- Git aliases ---
+alias gs='git status'
+alias gaa='git add -A'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate'
 
 # --- Shell integrations ---
 eval "$(fzf --zsh)"
