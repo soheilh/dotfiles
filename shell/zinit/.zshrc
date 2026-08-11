@@ -73,6 +73,7 @@ alias grep='rg --color=auto'
 alias rm='rm -i'
 alias tor-on='sudo systemctl start tor.service'
 alias tor-off='sudo systemctl stop tor.service'
+alias tor-rs='sudo systemctl restart tor.service'
 alias tor-status='journalctl -exfu tor'
 
 # --- Git aliases ---
