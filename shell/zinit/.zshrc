@@ -14,18 +14,29 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh" src"init.zsh"
 zinit light starship/starship
 
+# -- PATH --
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # --- Add Plugins ---
-zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light junegunn/fzf
 zinit light Aloxaf/fzf-tab
+zinit light zsh-users/zsh-syntax-highlighting
 zinit light so-fancy/diff-so-fancy
 zinit light hlissner/zsh-autopair
+
+eval "$(fzf --zsh)"
 
 # --- Load completions ---
 autoload -Uz compinit
 compinit -C
+
+# --- Completion styling ---
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 
 # --- Keybindings ---
 autoload -U history-search-end
@@ -46,8 +57,8 @@ bindkey '^H' backward-kill-word
 bindkey "\e[3;6~" kill-line
 
 # --- History ---
-HISTSIZE=5000
 HISTFILE=~/.zsh_history
+HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
@@ -55,22 +66,20 @@ setopt sharehistory
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
-setopt hist_ignore_dups
 setopt hist_find_no_dups
-
-# --- Completion styling ---
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+setopt hist_reduce_blanks
 
 # --- Aliases ---
 alias ls='eza --icons'
+alias ll='eza -lah --icons'
+alias la='eza -a --icons'
+alias lt='eza --tree --level=2 --icons'
 alias ip='ip -c'
 alias diff='diff --color'
 alias grep='rg --color=auto'
 alias rm='rm -i'
+
+# --- Tor Aliases ---
 alias tor-on='sudo systemctl start tor.service'
 alias tor-off='sudo systemctl stop tor.service'
 alias tor-rs='sudo systemctl restart tor.service'
@@ -82,15 +91,10 @@ alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
-
-# --- Shell integrations ---
-eval "$(fzf --zsh)"
-# eval "$(zoxide init --cmd cd zsh)"
+alias gd='git diff'
 
 # --- Completion ---
 # Completion scripts setup. Remove the following line to uninstall
-[[ -f /home/soheil/.dart-cli-completion/zsh-config.zsh ]] && . /home/soheil/.dart-cli-completion/zsh-config.zsh || true
-
-# -- Add to PATH --
-export PATH="$HOME/.cargo/bin:$PATH"
-
+if [[ -f "$HOME/.dart-cli-completion/zsh-config.zsh" ]]; then
+    source "$HOME/.dart-cli-completion/zsh-config.zsh"
+fi
