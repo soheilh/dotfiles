@@ -8,13 +8,13 @@ background-opacity = 0.85
 # custom-shader = shaders/bloom.glsl
 
 # --- FONT SETTINGS ---
-font-family = JetBrainsMono NFM
+font-family = Maple Mono NF
 font-style = SemiBold
 font-style-bold = ExtraBold
 font-style-italic = SemiBold Italic
 font-style-bold-italic = ExtraBold Italic
 font-size = 14
-bold-is-bright = true
+bold-color = bright
 
 # --- CURSOR SETTINGS ---
 cursor-style = block
@@ -22,8 +22,8 @@ cursor-style-blink = true
 cursor-invert-fg-bg = true
 
 # --- WINDOW & UI SETTINGS ---
-window-width = 120
-window-height = 30
+window-width = 100
+window-height = 26
 window-theme = ghostty
 mouse-hide-while-typing = true
 gtk-titlebar = false
