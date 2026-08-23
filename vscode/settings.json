@@ -1,6 +1,6 @@
 {
     "files.autoSave": "afterDelay",
-    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'JetBrainsMono Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontFamily": "'Maple Mono', 'FiraCode Nerd Font Mono', 'JetBrainsMono Nerd Font'",
     "editor.fontSize": 15,
     "editor.fontWeight": "500",
     "editor.lineHeight": 1.5,
@@ -20,5 +20,8 @@
     },
     "rust-analyzer.server.path": "/usr/lib/rustup/bin/rust-analyzer",
     "latex-workshop.latex.autoBuild.run": "onSave",
-    "latex-workshop.latex.recipe.default": "latexmk (xelatex)"
+    "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+    "jupyter.askForKernelRestart": false,
+    "gitblame.inlineMessageFormat": "${author.name} (${time.ago})",
+    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})"
 }
