@@ -70,10 +70,10 @@ setopt hist_find_no_dups
 setopt hist_reduce_blanks
 
 # --- Aliases ---
-alias ls='eza --icons'
-alias ll='eza -lah --icons'
-alias la='eza -a --icons'
-alias lt='eza --tree --level=2 --icons'
+alias ls='eza --icons=always'
+alias ll='eza -lah --icons=always'
+alias la='eza -a --icons=always'
+alias lt='eza --tree --level=2 --icons=always'
 alias ip='ip -c'
 alias diff='diff --color'
 alias grep='rg --color=auto'
