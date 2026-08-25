@@ -1,6 +1,6 @@
 # --- THEME & APPEARANCE SETTINGS ---
 theme = "light:GitHub Light Default,dark:GitHub Dark Default"
-background-opacity = 0.85
+# background-opacity = 0.85
 # background-blur-radius = 20
 # config-file = themes/rosepine
 
@@ -63,11 +63,9 @@ keybind = ctrl+7=goto_tab:7
 keybind = ctrl+8=goto_tab:8
 keybind = ctrl+9=goto_tab:9
 
-## Tmux-like Keybinds
-# (ctrl+b for tmux -> cmd+b for ghostty)
-keybind = super+b>x=close_surface
-
-## Splitting
-keybind = super+b>\=new_split:right
-keybind = super+b>-=new_split:down
-keybind = super+b>e=equalize_splits
+## Pane Management
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+x=close_surface
