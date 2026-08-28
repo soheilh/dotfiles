@@ -13,9 +13,25 @@ source "${ZINIT_HOME}/zinit.zsh"
 # --- Load starship theme ---
 zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh" src"init.zsh"
 zinit light starship/starship
+export STARSHIP_CONFIG=~/.config/starship.toml
+
+# --- Prompt spacing ---
+# NOTE: Set `add_newline = false` in ~/.config/starship.toml.
+# This prevents Starship from adding a newline.
+
+typeset -g FIRST_PROMPT=1
+add_prompt_spacing() {
+    if (( FIRST_PROMPT )); then
+        FIRST_PROMPT=0
+    else
+        printf '\n'
+    fi
+}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd add_prompt_spacing
 
 # -- PATH --
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 # --- Add Plugins ---
 zinit light zsh-users/zsh-completions
