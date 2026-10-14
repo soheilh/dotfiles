@@ -1,5 +1,5 @@
 {
-    "files.autoSave": "afterDelay",
+    // Editor
     "editor.fontFamily": "'Maple Mono', 'FiraCode Nerd Font Mono', 'JetBrainsMono Nerd Font'",
     "editor.fontSize": 15,
     "editor.fontWeight": "500",
@@ -9,19 +9,42 @@
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
     "editor.wordWrap": "on",
+    
+    // Window
+    "workbench.colorTheme": "Catppuccin Mocha",
     "window.titleBarStyle": "custom",
     "window.dialogStyle": "custom",
     "window.zoomLevel": 1,
     "workbench.layoutControl.enabled": false,
     "workbench.navigationControl.enabled": false,
-    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "workbench.browser.showInTitleBar": true,
+    
+    // Files
+    "files.autoSave": "afterDelay",
     "files.exclude": {
         "**/__pycache__": true
     },
-    "rust-analyzer.server.path": "/usr/lib/rustup/bin/rust-analyzer",
+    
+    // Terminal
+    "terminal.integrated.stickyScroll.enabled": false,
+    
+    // Chat
+    "chat.titleBar.openInAgentsWindow.enabled": false,
+    "chat.titleBar.signIn.enabled": false,
+
+    // Rust
+    // "rust-analyzer.server.path": "/usr/lib/rustup/bin/rust-analyzer",
+    "rust-analyzer.checkOnSave": false,
+    "rust-analyzer.cachePriming.enable": false,
+    "rust-analyzer.lru.capacity": 64,
+    "rust-analyzer.cargo.allTargets": false,
+    "rust-analyzer.files.excludeDirs": ["target", ".git", "node_modules"],
+
+    // Latex
     "latex-workshop.latex.autoBuild.run": "onSave",
-    "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
-    "jupyter.askForKernelRestart": false,
+    // "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+    
+    // Git
     "gitblame.inlineMessageFormat": "${author.name} (${time.ago})",
-    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})"
+    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
 }
