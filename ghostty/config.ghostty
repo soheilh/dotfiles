@@ -1,11 +1,11 @@
 # --- THEME & APPEARANCE SETTINGS ---
-theme = "light:GitHub Light Default,dark:GitHub Dark Default"
-# background-opacity = 0.85
+theme = "light:Catppuccin Latte, dark:Catppuccin Mocha"
+background = #181825
 # background-blur-radius = 20
 # config-file = themes/rosepine
 
 # --- SHADER SETTINGS ---
-# custom-shader = shaders/bloom.glsl
+# custom-shader = shaders/cursor_glide.glsl
 
 # --- FONT SETTINGS ---
 font-family = Maple Mono NF
@@ -13,7 +13,7 @@ font-style = SemiBold
 font-style-bold = ExtraBold
 font-style-italic = SemiBold Italic
 font-style-bold-italic = ExtraBold Italic
-font-size = 14
+font-size = 13
 bold-color = bright
 
 # --- CURSOR SETTINGS ---
@@ -23,11 +23,11 @@ cursor-invert-fg-bg = true
 
 # --- WINDOW & UI SETTINGS ---
 window-width = 100
-window-height = 26
+window-height = 27
 window-theme = ghostty
 mouse-hide-while-typing = true
 gtk-titlebar = false
-confirm-close-surface = false
+confirm-close-surface = true
 window-decoration = auto
 window-padding-x = 20
 window-padding-y = 20
@@ -40,7 +40,6 @@ auto-update-channel = stable
 # --- EXTRA FEATURES ---
 shell-integration-features = no-cursor 
 # copy-on-select = clipboard
-confirm-close-surface = true
 
 # --- CUSTOM KEYBINDINGS ---
 ## Simple Keybinds
@@ -69,3 +68,4 @@ keybind = ctrl+shift+j=goto_split:down
 keybind = ctrl+shift+k=goto_split:up
 keybind = ctrl+shift+l=goto_split:right
 keybind = ctrl+shift+x=close_surface
+keybind = ctrl+shift+s=new_split:auto
